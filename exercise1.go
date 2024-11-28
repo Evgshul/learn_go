@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func Sqrt(x float64, initialGuess float64) float64 {
+func Sqrt1(x float64, initialGuess float64) float64 {
 
 	z := initialGuess
 	threshold := 1e-10
@@ -29,7 +29,7 @@ func main() {
 	for _, guess := range initialGuess {
 		fmt.Printf("Initial guess: %v\n", guess)
 		for _, x := range valuesToSquare {
-			result := Sqrt(x, guess)
+			result := Sqrt1(x, guess)
 			realResult := math.Sqrt(x)
 			difference := math.Abs(realResult - result)
 
